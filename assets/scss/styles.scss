@@ -1,0 +1,53 @@
+/* $$ SETTINGS */
+//used with preprocessors and contain font, colors definitions, etc
+@import "./01.settings/breakpoints";
+@import "./01.settings/color";
+@import "./01.settings/maps";
+@import "./01.settings/text";
+@import "./01.settings/units";
+
+/* $$ TOOLS */
+//globally used mixins and functions
+@import "./02.tools/functions";
+@import "./02.tools/mixins";
+@import "./02.tools/queries";
+
+//fonts
+
+@import "./02.tools/fonts/din-next";
+
+/* $$ GENERIC */
+//reset and/or normalize styles, box-sizing definition, etc.
+@import "./03.generic/box-sizing";
+@import "./03.generic/normalize";
+
+/* $$ BASE */
+// styling for bare HTML elements and fonts files
+@import "./04.base/base";
+@import "./04.base/icons";
+
+/* $$ OBJECTS */
+// Theme selectors which define undecorated design patterns
+@import "./05.objects/grid";
+
+/* $$ COMPONENTS */
+// Specific UI components
+
+/* $$ UTILITIES */
+// utility classes with the ability to overwrite any property
+@import "./07.utilities/areas";
+@import "./07.utilities/border";
+@import "./07.utilities/color";
+@import "./07.utilities/display";
+@import "./07.utilities/flex";
+@import "./07.utilities/overflow";
+@import "./07.utilities/position";
+@import "./07.utilities/remove-content";
+@import "./07.utilities/size";
+@import "./07.utilities/spacing";
+@import "./07.utilities/text";
+@import "./07.utilities/visibility";
+@import "./07.utilities/more";
+
+/* $$ TRUMPS */
+// utilities and helper classes with ability to override anything which goes before in the triangle

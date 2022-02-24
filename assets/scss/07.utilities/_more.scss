@@ -1,0 +1,145 @@
+// $$ scroll
+.scroll {
+  overflow-y: auto;
+
+  &-auto {
+    overflow: auto;
+  }
+
+  &-no {
+    overflow: hidden;
+  }
+
+  &-y {
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  &-x {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+
+  // flex container to use all space
+
+  &-container {
+    height: 0;
+    width: calc(100% + 1.5rem);
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex: 2 1 auto;
+  }
+}
+
+//Rotate
+.rotate {
+  &--left {
+    transform: rotate(90deg);
+  }
+
+  &--right {
+    transform: rotate(270deg);
+  }
+}
+
+// $$ Cursors
+.click {
+  &-no {
+    cursor: default !important;
+    pointer-events: none;
+  }
+
+  &-active {
+    cursor: pointer !important;
+  }
+
+  &-move {
+    cursor: move !important;
+  }
+
+  &-help {
+    cursor: help !important;
+  }
+
+  &-grab {
+    cursor: grab !important;
+  }
+
+  &-default {
+    cursor: default !important;
+  }
+}
+
+//Box sizing
+.box-sizing {
+  &-border {
+    box-sizing: border-box !important;
+  }
+
+  &-content {
+    box-sizing: content-box !important;
+  }
+}
+
+//screen-read only
+.sr-only {
+  position: absolute;
+  border: 0;
+  margin: -1px;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+}
+
+//rotate icon
+.icon-rotate {
+  &-90 {
+    &::before {
+      transform: rotate(90deg);
+      display: block;
+    }
+    &--a {
+      ::after {
+        transform: rotate(90deg);
+        display: block;
+      }
+    }
+  }
+
+  &-180 {
+    &::before {
+      transform: rotate(180deg);
+      display: block;
+    }
+    &--a {
+      ::after {
+        transform: rotate(180deg);
+        display: block;
+      }
+    }
+  }
+
+  &-270 {
+    &::before {
+      transform: rotate(270deg);
+      display: block;
+    }
+    &--a {
+      ::after {
+        transform: rotate(270deg);
+        display: block;
+      }
+    }
+  }
+}
+
+//full size box
+.full-size {
+  position: absolute !important;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

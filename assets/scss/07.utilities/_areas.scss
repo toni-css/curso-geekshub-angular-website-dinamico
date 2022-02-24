@@ -1,0 +1,9 @@
+.area {
+  @for $i from 1 through 12 {
+    $value: $i;
+
+    &#{$value} {
+      grid-area: area#{$i};
+    }
+  }
+}

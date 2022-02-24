@@ -1,0 +1,62 @@
+// $$ borders
+@each $direction,
+  $property in ("r": "right", "l": "left", "t": "top", "b": "bottom")
+{
+  .border-#{$direction} {
+    border-color: var(--color-border) !important;
+
+    &-0 {
+      border-#{$property}: 0 !important;
+    }
+
+    &-1 {
+      border-color: var(--color-border) !important;
+      border-#{$property}: 1px solid !important;
+    }
+
+    &-2 {
+      border-color: var(--color-border) !important;
+      border-#{$property}: 2px solid !important;
+    }
+
+    &-3 {
+      border-color: var(--color-border) !important;
+      border-#{$property}: 3px solid !important;
+    }
+
+    &-dashed {
+      border-color: var(--color-border) !important;
+      border-#{$property}: 1px dashed !important;
+    }
+  }
+
+  .border {
+    &-0 {
+      border: 0 !important;
+    }
+
+    &-1 {
+      border: 1px solid !important;
+      border-color: var(--color-border) !important;
+    }
+
+    &-2 {
+      border: 2px solid !important;
+      border-color: var(--color-border) !important;
+    }
+
+    &-3 {
+      border: 3px solid !important;
+      border-color: var(--color-border) !important;
+    }
+
+    &-dashed {
+      border: 1px dashed !important;
+      border-color: var(--color-border) !important;
+    }
+  }
+}
+
+.border-no {
+  border: none !important;
+}

@@ -1,0 +1,127 @@
+
+//$$ placeholder
+@mixin placeholder() {
+  &::input-placeholder {
+    @content;
+  }
+
+  &:placeholder {
+    @content;
+  }
+
+  &:input-placeholder {
+    @content;
+  }
+
+  &[placeholder] {
+    @content;
+  }
+}
+// Usage: @include placeholder
+
+
+//---------------
+//$$ Tipografia
+//---------------
+
+//$$ Font-size 
+//solo con unidades rem
+@mixin font-size($size) {
+  font-size: px($size); //Fallback
+  font-size: $size;
+}
+// mirar añadir line height
+
+//Usage: @include font-size(1rem);
+
+
+//$$ Ellipsis on overflow
+@mixin txt-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin txt-ellipsis-lastline {
+  overflow: hidden;
+  text-overflow: -o-ellipsis-lastline;
+  word-wrap: break-word;
+}
+
+//Usage: @include txt-ellipsis;
+//Usage: @include txt-ellipsis-lastline;
+
+
+
+//---------------
+//$$ Estructura
+//---------------
+
+//$$ Disabled
+@mixin disabled {
+  pointer-events: none;
+  cursor: default !important;
+}
+//se puede ampliar con colores, opacidad etc...
+
+// @include disabled;
+
+//$$ posición absoluta
+@mixin absolute($t: null, $r: null, $b: null, $l: null) {
+  position: absolute;
+  top: $t;
+  right: $r;
+  bottom: $b;
+  left: $l;
+}
+
+// @include absolute (2px, 3px, 4px, 5px)
+// @include absolute ($t:2px, $l:2px)
+
+//$$ hidden
+@mixin hidden {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  visibility: hidden;
+  border: 0;
+}
+
+// Usage: @include hidden
+
+//$$ center - centrado vertical y horizontal con flexbox
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Usage: @include center
+
+//$$ size - tamaño ancho y alto
+@mixin size($w: null, $h: null) {
+  width: $w;
+  height: $h;
+}
+
+// CREAR VERSIONES MIN Y MAX
+
+// Usage: @include size(4px, 2px)
+
+
+
+//$$ Testing
+@mixin testing {
+  background: blue;
+  border: 1px solid red;
+}
+
+//TUNEAR EL CAMBIO DE COLORES
+
+// z-index
+
+@mixin z-index($key) {
+  z-index: z-index($key);
+}

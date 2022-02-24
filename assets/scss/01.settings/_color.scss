@@ -1,0 +1,43 @@
+$green: #008a3a;
+$greenMedium: #0a8250;
+$greenDark: #066b41;
+$greyLighter: #e5e5e5;
+$greyLight: #cecece;
+$grey: #aaa;
+$greyDark: #303030;
+$orange: #f0832b;
+$red: #cf3030;
+$white: #ffffff;
+$black: #000000;
+
+$buttonPrimary: #00843d;
+$buttonPrimaryOver: $greenDark;
+$color-error: $red;
+$bg-color: $greyLighter;
+$colorLink: $buttonPrimary;
+$colorLinkOver: $buttonPrimaryOver;
+$color-border: $greyLight;
+
+$shadowFloatingDown: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+$shadowFloatingUp: 0 -3px 6px 0 rgba(0, 0, 0, 0.16);
+$shadowModal: 0 3px 32px 0 rgba(0, 0, 0, 0.36);
+$shadowFloatingBlur: 0 3px 20px 0 rgba(0, 0, 0, 0.16);
+
+$utility-colors: (
+  "white": $white,
+  "black": $black,
+  "green": $green,
+  "greenMedium": $greenMedium,
+  "greenDark": $greenDark,
+  "grey": $grey,
+  "greyLighter": $greyLighter,
+  "greyLight": $greyLight,
+  "greyDark": $greyDark,
+  "orange": $orange,
+  "red": $red,
+  "disabled": $greyLight,
+  "buttonPrimary": $buttonPrimary,
+  "link": $colorLink,
+  "link-over": $colorLinkOver,
+  "inherit": inherit,
+);

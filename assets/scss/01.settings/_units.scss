@@ -1,0 +1,21 @@
+$unidad-contexto: 16;
+$html-font-size: 16px;
+
+$porcentaje-w: 5; // salto de porcentaje de n en n
+$porcentaje-w-fin: 20; // numero de reglas a generar * 10
+
+// alto
+$porcentaje-h: 5; // salto de porcentaje de n en n
+$porcentaje-h-fin: 20; // numero de reglas a generar * 10
+
+$spacers: (
+  "0": 0,
+  "1": 4px,
+  "2": 8px,
+  "3": 12px,
+  "4": 16px,
+  "5": 24px,
+  "6": 32px,
+  "7": 40px,
+  "8": 48px,
+);

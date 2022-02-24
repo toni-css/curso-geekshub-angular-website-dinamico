@@ -1,0 +1,32 @@
+// z-index
+
+@function z-index($key) {
+  @return map-get($z-index, $key);
+}
+
+// spacers
+
+@function spacer($name) {
+  $stringName: inspect($name);
+  @return map-get($spacers, $stringName);
+}
+
+// conversor de medidas
+
+@function stripUnit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@function rem($pxValue) {
+  @return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
+}
+
+@function px($remValue) {
+  @return #{stripUnit($remValue) * stripUnit($html-font-size)}px;
+}
+
+// z-index
+
+@function z-index($key) {
+  @return map-get($z-index, $key);
+}

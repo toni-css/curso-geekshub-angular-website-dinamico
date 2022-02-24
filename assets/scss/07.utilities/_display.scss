@@ -1,0 +1,58 @@
+$utility-displays: (
+  "none": none,
+  "inline": inline,
+  "inline-block": inline-block,
+  "block": block,
+  "table": table,
+  "grid": grid,
+  "table-cell": table-cell,
+  "table-row": table-row,
+  "flex": flex,
+  "inline-flex": inline-flex,
+) !default;
+
+@each $name, $property in $utility-displays {
+  .d-#{$name} {
+    display: $property !important;
+  }
+}
+
+@include size-xxl {
+  @each $name, $property in $utility-displays {
+    .d-#{$name}-xxl {
+      display: $property !important;
+    }
+  }
+}
+
+@include size-xl {
+  @each $name, $property in $utility-displays {
+    .d-#{$name}-xl {
+      display: $property !important;
+    }
+  }
+}
+
+@include size-lg {
+  @each $name, $property in $utility-displays {
+    .d-#{$name}-lg {
+      display: $property !important;
+    }
+  }
+}
+
+@include size-md {
+  @each $name, $property in $utility-displays {
+    .d-#{$name}-md {
+      display: $property !important;
+    }
+  }
+}
+
+@include size-sm {
+  @each $name, $property in $utility-displays {
+    .d-#{$name}-sm {
+      display: $property !important;
+    }
+  }
+}

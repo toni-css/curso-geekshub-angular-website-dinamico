@@ -1,0 +1,53 @@
+$utility-positions: (
+  "static": static,
+  "relative": relative,
+  "absolute": absolute,
+  "fixed": fixed,
+  "sticky": sticky,
+) !default;
+
+@each $name, $property in $utility-positions {
+  .position-#{$name} {
+    position: $property !important;
+  }
+}
+
+@include size-xxl {
+  @each $name, $property in $utility-positions {
+    .position-#{$name}-xxl {
+      position: $property !important;
+    }
+  }
+}
+
+@include size-xl {
+  @each $name, $property in $utility-positions {
+    .position-#{$name}-xl {
+      position: $property !important;
+    }
+  }
+}
+
+@include size-lg {
+  @each $name, $property in $utility-positions {
+    .position-#{$name}-lg {
+      position: $property !important;
+    }
+  }
+}
+
+@include size-md {
+  @each $name, $property in $utility-positions {
+    .position-#{$name}-md {
+      position: $property !important;
+    }
+  }
+}
+
+@include size-sm {
+  @each $name, $property in $utility-positions {
+    .position-#{$name}-sm {
+      position: $property !important;
+    }
+  }
+}

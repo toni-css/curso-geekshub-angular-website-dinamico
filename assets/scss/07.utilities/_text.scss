@@ -1,0 +1,110 @@
+$utility-aligns: (
+  "left": left,
+  "right": right,
+  "center": center,
+  "justify": justify,
+) !default;
+
+@each $name, $property in $utility-aligns {
+  .text-#{$name} {
+    text-align: $property !important;
+  }
+}
+
+$utility-font-weight: (
+  "bold": $bold,
+  "medium": $medium,
+  "normal": $regular,
+  "light": $light,
+) !default;
+
+@each $name, $property in $utility-font-weight {
+  .font-weight-#{$name} {
+    font-weight: $property !important;
+  }
+}
+
+$utility-font-sizes: (
+  "xs": $text-xs,
+  "sm": $text-sm,
+  "base": $text-default,
+  "md": $text-md,
+  "lg": $text-lg,
+  "xl": $text-xl,
+  "xxl": $text-xxl,
+  "xxxl": $text-xxxl,
+  "icon-xxs": $text-icon-xxs,
+  "icon-xs": $text-icon-xs,
+  "icon-sm": $text-icon-sm,
+  "icon-base": $text-icon-default,
+  "icon-md": $text-icon-md,
+  "icon-lg": $text-icon-lg,
+  "icon-xl": $text-icon-xl,
+  "icon-xxl": $text-icon-xxl,
+) !default;
+
+@each $name, $property in $utility-font-sizes {
+  .font-size-#{$name} {
+    font-size: $property !important;
+  }
+
+  .line-height-#{$name} {
+    line-height: $property !important;
+  }
+}
+
+$utility-icons-font-sizes: (
+  "xxs": $text-icon-xxs,
+  "xs": $text-icon-xs,
+  "sm": $text-icon-sm,
+  "base": $text-icon-default,
+  "md": $text-icon-md,
+  "lg": $text-icon-lg,
+  "xl": $text-icon-xl,
+  "xxl": $text-icon-xxl,
+) !default;
+
+@each $name, $property in $utility-icons-font-sizes {
+  .icon-font-size-#{$name} {
+    &::before,
+    &::after {
+      font-size: $property !important;
+    }
+  }
+}
+
+.text-break {
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+}
+
+.text-line-through {
+  text-decoration: line-through;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}
+.text-nowrap {
+  white-space: nowrap !important;
+}
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-check-label {
+  font-size: var(--text-default);
+  line-height: var(--text-md);
+  color: $greyDark;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}

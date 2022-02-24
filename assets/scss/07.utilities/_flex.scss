@@ -1,0 +1,517 @@
+// Direction
+$utility-flex-direction: (
+  "row": row,
+  "row-reverse": row-reverse,
+  "column": column,
+  "column-reverse": column-reverse,
+) !default;
+
+@each $name, $property in $utility-flex-direction {
+  .flex-#{$name} {
+    flex-direction: $property !important;
+  }
+}
+
+@include size-xxl {
+  @each $name, $property in $utility-flex-direction {
+    .flex-#{$name}-xxl {
+      flex-direction: $property !important;
+    }
+  }
+}
+
+@include size-xl {
+  @each $name, $property in $utility-flex-direction {
+    .flex-#{$name}-xl {
+      flex-direction: $property !important;
+    }
+  }
+}
+
+@include size-lg {
+  @each $name, $property in $utility-flex-direction {
+    .flex-#{$name}-lg {
+      flex-direction: $property !important;
+    }
+  }
+}
+
+@include size-md {
+  @each $name, $property in $utility-flex-direction {
+    .flex-#{$name}-md {
+      flex-direction: $property !important;
+    }
+  }
+}
+
+@include size-sm {
+  @each $name, $property in $utility-flex-direction {
+    .flex-#{$name}-sm {
+      flex-direction: $property !important;
+    }
+  }
+}
+
+// Align items
+$utility-align-items: (
+  "start": flex-start,
+  "end": flex-end,
+  "center": center,
+  "baseline": baseline,
+) !default;
+
+@each $name, $property in $utility-align-items {
+  .align-items-#{$name} {
+    align-items: $property !important;
+  }
+}
+
+@include size-xxl {
+  @each $name, $property in $utility-align-items {
+    .align-items-#{$name}-xxl {
+      align-items: $property !important;
+    }
+  }
+}
+
+@include size-xl {
+  @each $name, $property in $utility-align-items {
+    .align-items-#{$name}-xl {
+      align-items: $property !important;
+    }
+  }
+}
+
+@include size-lg {
+  @each $name, $property in $utility-align-items {
+    .align-items-#{$name}-lg {
+      align-items: $property !important;
+    }
+  }
+}
+
+@include size-md {
+  @each $name, $property in $utility-align-items {
+    .align-items-#{$name}-md {
+      align-items: $property !important;
+    }
+  }
+}
+
+@include size-sm {
+  @each $name, $property in $utility-align-items {
+    .align-items-#{$name}-sm {
+      align-items: $property !important;
+    }
+  }
+}
+
+// Align self
+$utility-align-self: (
+  "start": flex-start,
+  "end": flex-end,
+  "center": center,
+  "baseline": baseline,
+  "stretch": stretch,
+) !default;
+
+@each $name, $property in $utility-align-self {
+  .align-self-#{$name} {
+    align-self: $property !important;
+  }
+}
+
+@include size-xxl {
+  @each $name, $property in $utility-align-self {
+    .align-self-#{$name}-xxl {
+      align-self: $property !important;
+    }
+  }
+}
+
+@include size-xl {
+  @each $name, $property in $utility-align-self {
+    .align-self-#{$name}-xl {
+      align-self: $property !important;
+    }
+  }
+}
+
+@include size-lg {
+  @each $name, $property in $utility-align-self {
+    .align-self-#{$name}-lg {
+      align-self: $property !important;
+    }
+  }
+}
+
+@include size-md {
+  @each $name, $property in $utility-align-self {
+    .align-self-#{$name}-md {
+      align-self: $property !important;
+    }
+  }
+}
+
+@include size-sm {
+  @each $name, $property in $utility-align-self {
+    .align-self-#{$name}-sm {
+      align-self: $property !important;
+    }
+  }
+}
+
+// Justify self
+$utility-justify-self: (
+  "start": flex-start,
+  "end": flex-end,
+  "center": center,
+  "baseline": baseline,
+  "stretch": stretch,
+) !default;
+
+@each $name, $property in $utility-justify-self {
+  .justify-self-#{$name} {
+    justify-self: $property !important;
+  }
+}
+
+@include size-xxl {
+  @each $name, $property in $utility-justify-self {
+    .justify-self-#{$name}-xxl {
+      justify-self: $property !important;
+    }
+  }
+}
+
+@include size-xl {
+  @each $name, $property in $utility-justify-self {
+    .justify-self-#{$name}-xl {
+      justify-self: $property !important;
+    }
+  }
+}
+
+@include size-lg {
+  @each $name, $property in $utility-justify-self {
+    .justify-self-#{$name}-lg {
+      justify-self: $property !important;
+    }
+  }
+}
+
+@include size-md {
+  @each $name, $property in $utility-justify-self {
+    .justify-self-#{$name}-md {
+      justify-self: $property !important;
+    }
+  }
+}
+
+@include size-sm {
+  @each $name, $property in $utility-justify-self {
+    .justify-self-#{$name}-sm {
+      justify-self: $property !important;
+    }
+  }
+}
+
+// Align content
+$utility-align-items: (
+  "start": flex-start,
+  "end": flex-end,
+  "center": center,
+  "between": space-between,
+  "around": space-around,
+  "stretch": stretch,
+) !default;
+
+@each $name, $property in $utility-align-items {
+  .align-content-#{$name} {
+    align-content: $property !important;
+  }
+}
+
+@include size-xxl {
+  @each $name, $property in $utility-align-items {
+    .align-content-#{$name}-xxl {
+      align-content: $property !important;
+    }
+  }
+}
+
+@include size-xl {
+  @each $name, $property in $utility-align-items {
+    .align-content-#{$name}-xl {
+      align-content: $property !important;
+    }
+  }
+}
+
+@include size-lg {
+  @each $name, $property in $utility-align-items {
+    .align-content-#{$name}-lg {
+      align-content: $property !important;
+    }
+  }
+}
+
+@include size-md {
+  @each $name, $property in $utility-align-items {
+    .align-content-#{$name}-md {
+      align-content: $property !important;
+    }
+  }
+}
+
+@include size-sm {
+  @each $name, $property in $utility-align-items {
+    .align-content-#{$name}-sm {
+      align-content: $property !important;
+    }
+  }
+}
+
+// Wrap
+$utility-flex-wrap: (
+  "wrap": wrap,
+  "nowrap": nowrap,
+  "wrap-reverse": wrap-reverse,
+) !default;
+
+@each $name, $property in $utility-flex-wrap {
+  .flex-#{$name} {
+    flex-wrap: $property !important;
+  }
+}
+
+@include size-xxl {
+  @each $name, $property in $utility-flex-wrap {
+    .flex-#{$name}-xxl {
+      flex-wrap: $property !important;
+    }
+  }
+}
+
+@include size-xl {
+  @each $name, $property in $utility-flex-wrap {
+    .flex-#{$name}-xl {
+      flex-wrap: $property !important;
+    }
+  }
+}
+
+@include size-lg {
+  @each $name, $property in $utility-flex-wrap {
+    .flex-#{$name}-lg {
+      flex-wrap: $property !important;
+    }
+  }
+}
+
+@include size-md {
+  @each $name, $property in $utility-flex-wrap {
+    .flex-#{$name}-md {
+      flex-wrap: $property !important;
+    }
+  }
+}
+
+@include size-sm {
+  @each $name, $property in $utility-flex-wrap {
+    .flex-#{$name}-sm {
+      flex-wrap: $property !important;
+    }
+  }
+}
+
+// Flex Grow
+$utility-flex-grow: 12 !default;
+
+@for $i from 0 through $utility-flex-grow {
+  .flex-#{$i},
+  .flex-grow-#{$i} {
+    flex-grow: $i !important;
+  }
+}
+
+@include size-xxl {
+  @for $i from 0 through $utility-flex-grow {
+    .flex-#{$i}-xxl,
+    .flex-grow-#{$i}-xxl {
+      flex-grow: $i !important;
+    }
+  }
+}
+
+@include size-xl {
+  @for $i from 0 through $utility-flex-grow {
+    .flex-#{$i}-xl,
+    .flex-grow-#{$i}-xl {
+      flex-grow: $i !important;
+    }
+  }
+}
+
+@include size-lg {
+  @for $i from 0 through $utility-flex-grow {
+    .flex-#{$i}-lg,
+    .flex-grow-#{$i}-lg {
+      flex-grow: $i !important;
+    }
+  }
+}
+
+@include size-md {
+  @for $i from 0 through $utility-flex-grow {
+    .flex-#{$i}-md,
+    .flex-grow-#{$i}-md {
+      flex-grow: $i !important;
+    }
+  }
+}
+
+@include size-sm {
+  @for $i from 0 through $utility-flex-grow {
+    .flex-#{$i}-sm,
+    .flex-grow-#{$i}-sm {
+      flex-grow: $i !important;
+    }
+  }
+}
+
+// Flex shrink
+$utility-flex-shrink: 12 !default;
+
+@for $i from 0 through $utility-flex-shrink {
+  .flex-shrink-#{$i} {
+    flex-shrink: $i !important;
+  }
+}
+
+@include size-xxl {
+  @for $i from 0 through $utility-flex-shrink {
+    .flex-shrink-#{$i}-xxl {
+      flex-shrink: $i !important;
+    }
+  }
+}
+
+@include size-xl {
+  @for $i from 0 through $utility-flex-shrink {
+    .flex-shrink-#{$i}-xl {
+      flex-shrink: $i !important;
+    }
+  }
+}
+
+@include size-lg {
+  @for $i from 0 through $utility-flex-shrink {
+    .flex-shrink-#{$i}-lg {
+      flex-shrink: $i !important;
+    }
+  }
+}
+
+@include size-md {
+  @for $i from 0 through $utility-flex-shrink {
+    .flex-shrink-#{$i}-md {
+      flex-shrink: $i !important;
+    }
+  }
+}
+
+@include size-sm {
+  @for $i from 0 through $utility-flex-shrink {
+    .flex-shrink-#{$i}-sm {
+      flex-shrink: $i !important;
+    }
+  }
+}
+
+// Order
+$utility-order: 12 !default;
+
+@for $i from 1 through $utility-order {
+  .order-#{$i} {
+    order: $i !important;
+  }
+}
+
+@include size-xxl {
+  @for $i from 1 through $utility-order {
+    .order-#{$i}-xxl {
+      order: $i !important;
+    }
+  }
+}
+
+@include size-xl {
+  @for $i from 1 through $utility-order {
+    .order-#{$i}-xl {
+      order: $i !important;
+    }
+  }
+}
+
+@include size-lg {
+  @for $i from 1 through $utility-order {
+    .order-#{$i}-lg {
+      order: $i !important;
+    }
+  }
+}
+
+@include size-md {
+  @for $i from 1 through $utility-order {
+    .order-#{$i}-md {
+      order: $i !important;
+    }
+  }
+}
+
+@include size-sm {
+  @for $i from 1 through $utility-order {
+    .order-#{$i}-sm {
+      order: $i !important;
+    }
+  }
+}
+
+.order-inverse-1 {
+  order: -1;
+}
+
+// Fill
+.flex-fill {
+  flex: 1 1 auto !important;
+}
+
+//Flex container
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  min-height: 0;
+}
+
+//others
+.flex {
+  &-ellipsis {
+    display: block;
+    min-width: 0;
+    flex: 1;
+  }
+
+  &-fit-content {
+    flex: 0 0 auto;
+  }
+
+  &-take-free-space {
+    flex: 1 0 auto;
+  }
+
+  &-center {
+    @include center;
+  }
+}

@@ -1,0 +1,15 @@
+// stylelint-disable declaration-no-important
+.remove-both {
+  ::after,
+  ::before {
+    content: none !important;
+  }
+}
+
+.remove-after::after {
+  content: none !important;
+}
+
+.remove-before::before {
+  content: none !important;
+}

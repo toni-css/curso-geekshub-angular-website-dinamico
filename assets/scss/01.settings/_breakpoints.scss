@@ -1,0 +1,22 @@
+// // Vars Grid
+// $laptop: 1366px;
+// $desktop: 1200px;
+// $desktop-small: 992px;
+// $tablet-landscape: 768px;
+// $tablet-portrait: 560px;
+// $mobile-landscape: 480px;
+// $mobile-portrait: 100%;
+
+$media-xxl: 1400px;
+$media-xl: 1200px;
+$media-lg: 992px;
+$media-md: 768px;
+$media-sm: 576px;
+
+// breakpoints
+
+$media-laptop: $media-xxl;
+$media-desktop: $media-xl;
+$media-desktop-small: $media-lg;
+$media-tablet-landscape: $media-md;
+$media-tablet-portrait: $media-sm;

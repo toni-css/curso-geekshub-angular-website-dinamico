@@ -1,0 +1,246 @@
+// Width
+.w {
+  @for $i from 1 through $porcentaje-w-fin {
+    $valor: ($porcentaje-w * $i);
+
+    @if $valor < 10 {
+      &-0#{$valor} {
+        width: unquote(($porcentaje-w * $i) + "%") !important;
+      }
+    } @else {
+      @if $valor < 100 or $valor>100 {
+        &-#{$valor} {
+          width: unquote(($porcentaje-w * $i) + "%") !important;
+        }
+      }
+    }
+  }
+
+  // clases genericas de uso común
+  &-100 {
+    width: 100% !important;
+  }
+
+  &-auto {
+    width: auto !important;
+  }
+
+  &-16 {
+    width: 16.66666% !important;
+  }
+
+  &-33 {
+    width: 33.3333% !important;
+  }
+
+  &-66 {
+    width: 66.66666% !important;
+  }
+
+  // valores fijos
+  &-px100 {
+    width: 100px !important;
+  }
+
+  &-px125 {
+    width: 125px !important;
+  }
+
+  &-px150 {
+    width: 150px !important;
+  }
+
+  &-box-0 {
+    flex-grow: 0 !important;
+    margin: 0 !important;
+    width: 0;
+    overflow: hidden;
+  }
+}
+
+// Min width
+
+.min-w {
+  @for $i from 1 through $porcentaje-w-fin {
+    $valor: ($porcentaje-w * $i);
+
+    @if $valor < 10 {
+      &-0#{$valor} {
+        min-width: unquote(($porcentaje-w * $i) + "%") !important;
+      }
+    } @else {
+      @if $valor < 100 or $valor>100 {
+        &-#{$valor} {
+          min-width: unquote(($porcentaje-w * $i) + "%") !important;
+        }
+      }
+    }
+  }
+  &-100 {
+    min-width: 100% !important;
+  }
+
+  &-auto {
+    min-width: auto !important;
+  }
+
+  &-16 {
+    min-width: 16.66666% !important;
+  }
+
+  &-33 {
+    min-width: 33.3333% !important;
+  }
+
+  &-66 {
+    min-width: 66.66666% !important;
+  }
+}
+
+// Max width
+
+.max-w {
+  @for $i from 1 through $porcentaje-w-fin {
+    $valor: ($porcentaje-w * $i);
+
+    @if $valor < 10 {
+      &-0#{$valor} {
+        max-width: unquote(($porcentaje-w * $i) + "%") !important;
+      }
+    } @else {
+      @if $valor < 100 or $valor>100 {
+        &-#{$valor} {
+          max-width: unquote(($porcentaje-w * $i) + "%") !important;
+        }
+      }
+    }
+  }
+  &-100 {
+    max-width: 100% !important;
+  }
+
+  &-auto {
+    max-width: auto !important;
+  }
+
+  &-16 {
+    max-width: 16.66666% !important;
+  }
+
+  &-33 {
+    max-width: 33.3333% !important;
+  }
+
+  &-66 {
+    max-width: 66.66666% !important;
+  }
+}
+
+// Height
+// altura en porcentajes
+.h {
+  @for $i from 1 through $porcentaje-h-fin {
+    $valor: ($porcentaje-h * $i);
+
+    @if $valor < 10 {
+      &-0#{$valor} {
+        height: unquote(($porcentaje-h * $i) + "%") !important;
+      }
+    } @else {
+      @if $valor < 100 or $valor>100 {
+        &-#{$valor} {
+          height: unquote(($porcentaje-h * $i) + "%") !important;
+        }
+      }
+    }
+  }
+
+  // clases genericas de uso común
+  &-100 {
+    height: 100% !important;
+  }
+
+  &-0 {
+    height: 0 !important;
+  }
+
+  &-auto {
+    height: auto !important;
+  }
+
+  &-100vh {
+    height: 100vh !important;
+  }
+}
+
+// minHeight
+
+.min-h {
+  @for $i from 1 through $porcentaje-w-fin {
+    $valor: ($porcentaje-w * $i);
+
+    @if $valor < 10 {
+      &-0#{$valor} {
+        min-height: unquote(($porcentaje-w * $i) + "%") !important;
+      }
+    } @else {
+      @if $valor < 100 or $valor>100 {
+        &-#{$valor} {
+          min-height: unquote(($porcentaje-w * $i) + "%") !important;
+        }
+      }
+    }
+  }
+
+  &-0 {
+    min-height: 0 !important;
+  }
+
+  &-100 {
+    min-height: 100% !important;
+  }
+
+  &-auto {
+    min-height: auto !important;
+  }
+
+  &-100vh {
+    min-height: 100vh !important;
+  }
+}
+
+// maxHeight
+
+.max-h {
+  @for $i from 1 through $porcentaje-w-fin {
+    $valor: ($porcentaje-w * $i);
+
+    @if $valor < 10 {
+      &-0#{$valor} {
+        max-height: unquote(($porcentaje-w * $i) + "%") !important;
+      }
+    } @else {
+      @if $valor < 100 or $valor>100 {
+        &-#{$valor} {
+          max-height: unquote(($porcentaje-w * $i) + "%") !important;
+        }
+      }
+    }
+  }
+
+  &-0 {
+    max-height: 0 !important;
+  }
+
+  &-100 {
+    max-height: 100% !important;
+  }
+
+  &-auto {
+    max-height: auto !important;
+  }
+
+  &-100vh {
+    max-height: 100vh !important;
+  }
+}

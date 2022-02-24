@@ -1,0 +1,326 @@
+// ::-webkit-scrollbar {
+//   @include size(5px, 5px);
+//   margin-right: -5px;
+//   background: none;
+// }
+
+// ::-webkit-scrollbar-track {
+//   background: transparent;
+//   border-radius: .5rem;
+// }
+
+// ::-webkit-scrollbar-thumb {
+//   background-color: transparent;
+//   border-radius: 10px;
+// }
+
+// ::-webkit-scrollbar-corner {
+//   background: transparent;
+// }
+
+html,
+body {
+  height: 100%;
+  font-family: $font-main;
+  font-size: $text-default;
+
+  * {
+    outline: 0;
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    font-style: inherit;
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-block-start: 0;
+    padding-block-end: 0;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+  }
+}
+
+/* RESET DEFAULT BUTTONS STYLES */
+[role="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* Reset `button` and button-style `input` default styles */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  border: 0;
+  background: none;
+  overflow: visible;
+  padding: 0;
+  font: inherit;
+  line-height: normal;
+  color: inherit;
+  /* cursor: default; */
+  cursor: pointer;
+  -webkit-user-select: none;
+  /* for button */
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-appearance: button;
+  /* for input */
+
+  &:focus {
+    outline: none;
+  }
+}
+
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+//REMOVE ARROWS INPUTS
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  /* Firefox */
+}
+
+/* Make `a` like a button */
+[role="button"] {
+  //cursor: default;
+  display: inline-block;
+  white-space: pre;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+//ALL LISTS
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+//text
+b,
+strong {
+  font-weight: $bold;
+}
+
+i {
+  display: inline-flex;
+  align-items: center;
+}
+
+p {
+  margin: 0;
+}
+
+.separator {
+  --colorBorder: #{$color-border};
+  margin: spacer(5) 0;
+  background-color: var(--colorBorder);
+  @include size(100%, 1px);
+  &.is-black {
+    --colorBorder: #{$black};
+  }
+}
+
+.body-bg {
+  z-index: -3;
+  background-image: url(../../assets/img/background-stars-mobile.jpeg);
+  background-color: $black;
+  background-position: center top;
+  background-repeat: no-repeat;
+  overflow-y: scroll;
+  @include size(100%, 100%);
+  @include size-md {
+    background-image: url(../../assets/img/background-stars-desktop.jpeg);
+  }
+}
+
+.main-header {
+  @include size(100%, 180px);
+
+  .logo {
+    max-height: 88px;
+  }
+}
+
+.main-nav {
+  --borderColor: yellow;
+  flex-direction: column;
+  border-top: 1px solid var(--borderColor);
+  border-bottom: 1px solid var(--borderColor);
+  background: $black;
+  height: 40px;
+  padding: spacer(2) auto;
+  @include center;
+}
+.main-menu {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 1px 0 0 1px;
+  font-size: 24px;
+  color: var(--borderColor);
+  //color: $grey;
+  li {
+    border-right: 1px solid var(--borderColor);
+    border-left: 1px solid var(--borderColor);
+    margin-bottom: 2px;
+    line-height: 28px;
+    @include center;
+    @include size(100%, 38px);
+    &:first-of-type {
+      border-left-width: 2px;
+    }
+    &:last-of-type {
+      border-right-width: 2px;
+    }
+
+    > .link {
+      opacity: 1;
+      text-decoration: none;
+      color: var(--colorBorder);
+      transition: opacity 0.3s ease-in-out;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.image {
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-auto-rows: 20rem;
+    grid-auto-flow: dense;
+    gap: spacer(4);
+    > * {
+      @include center;
+    }
+  }
+
+  &-block {
+    overflow: hidden;
+    @include size(100%, 100%);
+    > figure {
+      position: relative;
+      background: $black;
+      @include size(100%, 100%);
+      > img {
+        position: relative;
+        top: 0;
+        left: 0;
+        opacity: 0.5;
+        width: 100%;
+        transition: all 0.5s ease;
+      }
+
+      > figcaption {
+        background: $black;
+        font-size: 24px;
+        line-height: 32px;
+        transition: bottom 0.5s ease;
+        box-shadow: $shadowFloatingUp;
+        @include center;
+        @include absolute($b: -32px);
+        @include size(100%, 32px);
+      }
+    }
+
+    &:hover {
+      > figure {
+        > img {
+          top: -10%;
+          left: -10%;
+          opacity: 1;
+          height: auto;
+          width: 120%;
+        }
+        > figcaption {
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.main-footer {
+  border-top: 1px solid yellow;
+  height: auto;
+  @include size-md {
+    height: 80px;
+  }
+
+  &__container {
+    flex-direction: column;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    @include center;
+    @include size-md {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &__social {
+    margin-top: 24px;
+    font-size: 24px;
+    @include center;
+
+    > li {
+      display: flex;
+      justify-content: flex-end;
+      width: 48px;
+      &:hover {
+        .link {
+          opacity: 0.5;
+        }
+      }
+    }
+    .link {
+      opacity: 1;
+      color: yellow;
+      transition: opacity 0.3s ease-in-out;
+    }
+    @include size-md {
+      margin-top: 0;
+    }
+  }
+}
