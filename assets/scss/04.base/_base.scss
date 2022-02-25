@@ -230,6 +230,14 @@ p {
       &.is-other {
         --shadowColor: #{$green};
       }
+
+      > .link {
+        pointer-events: none;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
     }
   }
 }
