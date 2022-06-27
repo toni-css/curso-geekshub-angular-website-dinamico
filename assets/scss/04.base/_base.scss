@@ -157,14 +157,14 @@ p {
 
 .body-bg {
   z-index: -3;
-  background-image: url(../../assets/img/background-stars-mobile.jpeg);
+  background-image: url(img/background-stars-mobile.jpeg);
   background-color: $black;
   background-position: center top;
   background-repeat: no-repeat;
   overflow-y: scroll;
   @include size(100%, 100%);
   @include size-md {
-    background-image: url(../../assets/img/background-stars-desktop.jpeg);
+    background-image: url(img/background-stars-desktop.jpeg);
   }
 }
 
